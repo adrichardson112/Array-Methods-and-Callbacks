@@ -47,7 +47,6 @@ function getFinals(data) {
             finals_list.push(data[i]);
         }
     }
-return finals_list;
 };
 console.log(getFinals(fifaData));
 
