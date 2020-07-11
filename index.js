@@ -40,16 +40,11 @@ fifaData.forEach(function(item) {
 
 /* Task 2: Create a function called  getFinals that takes `data` as an argument and returns an array of objects with only finals data */
 
-function getFinals(data) {
-    var finalsList = [];
-    for(var i = 0; i < data.length, i++;) {
-        if(data[i].Stage === "Final") {
-            finalsList.push(data[i]);
-        }
-    }
- return finalsList;
-};
-console.log(getFinals(fifaData));
+const getFinals = fifaData.filter( (element) => {
+    return element.Stage === "Final"
+});
+
+console.log(getFinals);
 
 /* Task 3: Implement a higher-order function called `getYears` that accepts the callback function `getFinals`, and returns an array called `years` containing all of the years in the dataset */
 
