@@ -41,12 +41,13 @@ fifaData.forEach(function(item) {
 /* Task 2: Create a function called  getFinals that takes `data` as an argument and returns an array of objects with only finals data */
 
 function getFinals(data) {
-    var finals_list = [];
-    for(let i = 0; i <data.length, i++;) {
-        if(data.Stage === "Final") {
-            finals_list.push(data[i]);
+    var finalsList = [];
+    for(var i = 0; i < data.length, i++;) {
+        if(data[i].Stage === "Final") {
+            finalsList.push(data[i]);
         }
     }
+ return finalsList;
 };
 console.log(getFinals(fifaData));
 
