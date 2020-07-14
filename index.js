@@ -56,7 +56,7 @@ console.log(getFinals(fifaData));
 function getYears(callback) {
     let cb = callback(fifaData);
     const totalyears = cb.map((item) => {
-        return {'Year' : item.Year}
+        return  item.Year
     })
     return totalyears;
 }
@@ -68,11 +68,11 @@ function getWinners(callback) {
     let cb = callback(fifaData);
     let winners = [];
     for(let i = 0; i <cb.length; i++){
-        if(cb[i]["Home Team Goals"] > cb[i]["Away Team Goals"]){
-            winners.push(cb[i]["Home Team Goals"]);
+        if(cb[i]["Home Team Name"] > cb[i]["Away Team Name"]){
+            winners.push(cb[i]["Home Team Name"]);
         }
         else{
-            winners.push(cb[i]["Away Team Goals"]);
+            winners.push(cb[i]["Away Team Name"]);
         }
     }
     return winners;
@@ -88,8 +88,8 @@ Parameters:
  */
 
 function getWinnersByYear(callback1, callback2) {
-    let winyear = callback1(getYears);
-    let winnername = callback2(getWinners);
+    let winyear = callback1(getFinals(fifaData));
+    let winnername = callback2(getFinals(fifaData));
     let winnerList = [];
 
     for(let i = 0; i <winyear.length; i++){
