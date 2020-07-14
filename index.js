@@ -79,7 +79,6 @@ function getWinners(callback) {
 };
 console.log(getWinners(getFinals));
 
-getWinners();
 
 /* Task 6: Implement a higher-order function called `getWinnersByYear` that accepts the following parameters and returns a set of strings "In {year}, {country} won the world cup!" 
 
